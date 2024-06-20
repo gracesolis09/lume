@@ -1,0 +1,170 @@
+.header {
+    .topbar {
+        background-color: $sage;
+
+        & > .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 56px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__main {
+        padding: 25px 0;
+        background-color: $balsa;
+        border-bottom: 1px solid $evergreen;
+
+        & > .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .site-logo {
+        width: 170px;
+        height: auto;
+    }
+
+    &__toggler {
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+        box-shadow: 0;
+        background-color: transparent;
+
+        &-icon {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: $evergreen;
+            transition: .5s cubic-bezier(.65,.05,.36,1);
+
+            & +.header__toggler-icon {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    @include respond-to(lg-up) {
+        &__toggler {
+            display: none;
+        }
+
+        .navbar-collapse {
+            display: block;
+        }
+
+        &__main {
+            &-nav {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                column-gap: 0;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                .nav-item {
+                    font-weight: 600;
+                    line-height: normal;
+                    // margin-left: 20px;
+
+                    &.btn-outline {
+                        margin: 0 10px 0 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to(md-down) {
+        &__toggler {
+            &[aria-expanded="true"] {
+                .header__toggler-icon {
+                    &:nth-child(1) {
+                        transform: rotate(225deg) translate(-7px,-7px);
+                    }
+    
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+    
+                    &:nth-child(3) {
+                        transform: rotate(-225deg) translate(-7px,7px);
+                    }
+
+                    & +.header__toggler-icon {
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+
+        .navbar-collapse {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 999999;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-right: calc(var(--bs-gutter-x)* .5);
+            padding-left: calc(var(--bs-gutter-x)* .5);
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            overscroll-behavior: contain;
+            width: 100%;
+            text-align: center;
+            background-color: $balsa;
+
+            &.show {
+                display: block;
+            }
+        }
+
+        &__main-nav {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            .nav-item {
+                display: block;
+                margin: 1.5rem 0;
+
+                &.btn-primary,
+                &.btn-outline {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .nav-link  {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    } 
+}
+
+body {
+    @include respond-to(md-down) {
+        &.nav-open {
+            position: fixed;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            overscroll-behavior: none;
+        }
+    } 
+}

@@ -1,0 +1,32 @@
+{
+    "name": "lume-text-slider",
+    "title": "Lume - Text Slider",
+    "description": "Text Slider block",
+    "style": "block-text-slider",
+    "script": "block-text-slider",
+    "category": "text-slider-blocks",
+    "icon": "cover-image",
+    "apiVersion": 2,
+    "keywords": ["text", "slider"],
+    "acf": {
+        "mode": "edit",
+	    "renderTemplate": "text-slider.php"
+    },
+    "styles": [],
+    "supports": {
+        "color": {
+            "background": true,
+            "gradients": true
+        }
+    },
+    "attributes": {
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_text_slider": true
+            }
+        }
+    }
+}

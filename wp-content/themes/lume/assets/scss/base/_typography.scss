@@ -1,0 +1,63 @@
+body {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: $evergreen;
+}
+
+.is-style-subheading,
+.subheading {
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    margin-bottom: 35px;
+    @include respond-to(md-down) {
+        br{
+            display: none;
+        }
+    }
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+p {
+    line-height: 1.4;
+    margin-bottom: 30px;
+
+    strong {
+        font-weight: 600;
+    }
+
+    &:not(.is-style-small-text) {
+        br {
+            @include respond-to(sm-down) {
+                display: none;
+            }
+        }
+    }
+}
+
+.is-style-small-text {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.2;
+
+    @include respond-to(lg-up) {
+        margin-bottom: 0;
+    }
+}
+
+br {
+    content: 'A';
+    display: block;
+    margin-bottom: 0.3rem;
+}

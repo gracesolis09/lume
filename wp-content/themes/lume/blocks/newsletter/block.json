@@ -1,0 +1,32 @@
+{
+    "name": "lume-newsletter",
+    "title": "Lume - Newsletter",
+    "description": "Newsletter block",
+    "style": "block-newsletter",
+    "script": "block-newsletter",
+    "category": "newsletter-blocks",
+    "icon": "cover-image",
+    "apiVersion": 2,
+    "keywords": ["newsletter", "form"],
+    "acf": {
+        "mode": "preview",
+	    "renderTemplate": "newsletter.php"
+    },
+    "styles": [],
+    "supports": {
+        "color": {
+            "background": true,
+            "gradients": true
+        }
+    },
+    "attributes": {
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_newsletter": true
+            }
+        }
+    }
+}

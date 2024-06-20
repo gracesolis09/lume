@@ -1,0 +1,117 @@
+{
+    "version": 2,
+    "settings": {
+        "layout": {
+            "contentSize": "1320px",
+            "wideSize": "1600px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "name": "Sage",
+                    "slug": "sage",
+                    "color": "#B3CD96"
+                },
+                {
+                    "name": "Evergreen",
+                    "slug": "evergreen",
+                    "color": "#233C29"
+                },
+                {
+                    "name": "Balsa",
+                    "slug": "balsa",
+                    "color": "#eee8db"
+                },
+                {
+                    "name": "Burlwood",
+                    "slug": "burlwood",
+                    "color": "#804431"
+                },
+                {
+                    "name": "Ash",
+                    "slug": "ash",
+                    "color": "#5C564D"
+                },
+                {
+                    "name": "Driftwood",
+                    "slug": "driftwood",
+                    "color": "#807259"
+                },
+                {
+                    "name": "Beechwood",
+                    "slug": "beechwood",
+                    "color": "#B48E65"
+                },
+                {
+                    "name": "White",
+                    "slug": "white",
+                    "color": "#ffffff"
+                },
+                {
+                    "name": "Black",
+                    "slug": "black",
+                    "color": "#000000"
+                }
+            ]
+        },
+        "typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Manrope, sans-serif",
+					"slug": "manrope",
+					"name": "Manrope"
+				},
+                {
+					"fontFamily": "juana-light",
+					"slug": "juana-light",
+					"name": "Juana Light"
+				}
+			],
+            "fontSizes": [
+                {
+					"slug": "small",
+					"size": "18px",
+					"name": "Small"
+				},
+                {
+					"slug": "medium",
+					"size": "20px",
+					"name": "Medium"
+				},
+                {
+					"slug": "large",
+					"size": "28px",
+					"name": "Large"
+				},
+                {
+					"slug": "xlarge",
+					"size": "60px",
+					"name": "Extra Large"
+				},
+                {
+					"slug": "xx-large",
+					"size": "72px",
+					"name": "Double Extra Large"
+				}
+			],
+            "fontWeight": [
+                {
+                    "medium": 500,
+                    "semibold": 600
+                }
+            ],
+            "lineHeight": true
+		},
+        "spacing": {
+			"padding": true,
+			"margin": true,
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
+		},
+        "border": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+        }
+    }
+}

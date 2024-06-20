@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500..600&display=swap');
+@font-face {
+    font-family: 'juana-light';
+    src: url(../fonts/juana-light.eot);
+    src: url(../fonts/juana-light.eot?#iefix) format("embedded-opentype"), url(../fonts/juana-light.woff) format("woff"), url(../fonts/juana-light.ttf) format("truetype"), url(../fonts/juana-light.svg#juana-light) format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    margin: 0 0 35px 0;
+    font-size: 72px;
+}
+
+h2 {
+    margin: 0 0 35px 0;
+    font-size: 60px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.is-style-subheading {
+    font-weight: 600;
+}
+
+.wp-block-heading > span {
+    font-family: 'juana-light';
+}
+
+.lume-two-columns {
+    flex-wrap: nowrap;
+}
+
+.lume-two-columns__col--content {
+    max-width: 500px;
+}

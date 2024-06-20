@@ -1,0 +1,32 @@
+{
+    "name": "lume-image-linking",
+    "title": "Lume - Image Linking",
+    "description": "Image Linking block",
+    "style": "block-image-linking",
+    "script": "block-image-linking",
+    "category": "image-linking-blocks",
+    "icon": "cover-image",
+    "apiVersion": 2,
+    "keywords": ["image", "linking"],
+    "acf": {
+        "mode": "edit",
+	    "renderTemplate": "image-linking.php"
+    },
+    "styles": [],
+    "supports": {
+        "color": {
+            "background": true,
+            "gradients": true
+        }
+    },
+    "attributes": {
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_image_linking": true
+            }
+        }
+    }
+}

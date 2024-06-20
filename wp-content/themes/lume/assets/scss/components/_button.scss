@@ -1,0 +1,57 @@
+%btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    height: 42px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: $evergreen;
+    transition: .2s ease-in-out;
+
+    @include on-event() {
+        border-color: $evergreen;
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    color: $sage;
+    background-color: $evergreen;
+
+    @include on-event() {
+        color: $evergreen;
+        background-color: transparent;
+    }
+}
+
+.btn-outline {
+    @extend %btn;
+    background-color: transparent;
+
+    @include on-event() {
+        color: $sage;
+        background-color: $evergreen;
+    }
+
+    &--light {
+        @extend %btn;
+        color: $balsa;
+        border-color: $balsa;
+
+        @include on-event() {
+            color: $evergreen;
+            border-color: $balsa;
+            background-color: $balsa;
+        }
+    }
+}
+
+

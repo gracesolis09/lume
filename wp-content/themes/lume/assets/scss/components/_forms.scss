@@ -1,0 +1,110 @@
+form {
+    &._form_1cqch_6 {
+        display: flex;
+        justify-content: center;
+    }
+
+    ._sideBySideWrap_1cqch_10 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    input {
+        padding: 5px 15px;
+        min-width: 280px;
+        color: rgba(35, 60, 41, 0.5);
+        height: 50px;
+        background-color: $balsa;
+        appearance: none;
+        outline: none;
+        border: none;
+
+        &::placeholder {
+            color: rgba(35, 60, 41, 0.5);
+        }
+    }
+
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 15px;
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        &:last-of-type p {
+            margin-bottom: 0;
+        }
+    }
+
+    .form-control {
+        padding: 5px 15px;
+        color: rgba(35, 60, 41, 0.5);
+        appearance: none;
+        outline: none;
+        border: 1px solid $beechwood;
+        border-radius: 0;
+        background-color: transparent;
+
+        &::placeholder {
+            color: rgba(35, 60, 41, 0.5);
+        }
+    }
+
+    .btn-primary {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    @include respond-to(md-up) {
+        .btn-primary {
+            max-width: 200px;
+        }
+    }
+
+    @include respond-to(sm-down) {
+        ._sideBySideWrap_1cqch_10 {
+            ._emailInputWrapper_1cqch_55,
+            ._nameInputWrapper_1cqch_55 {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+  //Errors 
+  .wpcf7 {
+    form {
+        &.sent,
+        &.invalid {
+            .wpcf7-response-output {
+                margin: 2rem 0;
+                padding: 0;
+                color: $burlwood;
+                border: 0;
+            }
+        }
+
+        &.sent .wpcf7-response-output {
+            color: $evergreen;
+        }
+
+        .wpcf7-not-valid-tip {
+            font-size: 0.8rem;
+            color: $burlwood;
+            line-height: 2;
+        }
+
+        .wpcf7-spinner {
+            display: none;
+        }
+    }
+  }
+

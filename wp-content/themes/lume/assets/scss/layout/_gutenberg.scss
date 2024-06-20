@@ -1,0 +1,62 @@
+main {
+    .wp-block {
+        &-group {
+            &.alignfull {
+                @extend %alignfull;
+            }
+
+            &__inner-container {
+                padding-top: 60px;
+                padding-bottom: 60px;
+                .reverse-mobile {
+                    @include respond-to(md-down) {
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+        }
+
+        &-columns {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        
+        &-heading {
+            & > img {
+                display: inline-block;
+                vertical-align: baseline;
+            }
+        }
+       
+        @include respond-to(lg-up) {
+            &-contact-form-7-contact-form-selector {
+                padding-right: 65px;
+            }
+        }
+        
+    }
+    .internal-page{
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        a {
+            color: $evergreen;
+            font-weight: 600;
+        }
+
+        ul {
+            margin-top: -20px;
+
+            li {
+                line-height: 1.8;
+            }
+        }
+
+        @include respond-to(sm-down) {
+            br {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+%alignfull {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    z-index: 1;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+}
+
+.alignfull:not(.wp-block-image) {
+    @extend %alignfull;
+
+    .wp-block-group__inner-container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.error404 {
+    main {
+        .btn-primary {
+            margin: 0 auto;
+            max-width: 200px;
+        }
+    }
+}

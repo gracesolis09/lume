@@ -1,0 +1,130 @@
+.footer {
+    padding-top: 100px;
+    color: $balsa;
+    background-color: $evergreen;
+
+    &-menu {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        
+        li ~ li {
+            padding-top: 2rem;
+        }
+
+        a {
+            width: 100%;
+            color: $balsa;
+
+            &.btn-outline--light {
+                max-width: 320px;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+    }
+
+    .social-media {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+
+        &__link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            background-color: $balsa;
+            border-radius: 50px;
+
+            & ~ .social-media__link {
+                margin-left: 15px;
+            }
+
+            @include on-event() {
+                background-color: $sage;
+            }
+        }
+    }
+
+    &-logo {
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    form {
+        input {
+            color: rgba(247, 237, 223, 0.6);
+            background-color: transparent;
+            border: 1px solid $balsa;
+
+            &::placeholder {
+                color: rgba(247, 237, 223, 0.6);
+                opacity: 0.8;
+            }
+        }
+
+        .btn-primary {
+            color: $evergreen;
+            background-color: $balsa;
+
+            @include on-event() {
+                color: $balsa;
+                background-color: $evergreen;
+                border-color: $balsa;
+            }
+        }
+    }
+
+    .subheading {
+        font-size: 0.9rem;
+    }
+
+    &-copyright {
+        margin-top: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid $sage;
+
+        p {
+            margin-bottom: 0;
+            color: $balsa;
+            font-size: 0.8rem;
+        }
+
+        a {
+            color: inherit;
+        }
+    }
+
+    @include respond-to(md-down) {
+        &-col__logo {
+            order: -1;
+        }
+
+        form {
+            ._sideBySideWrap_1cqch_10 {
+                gap: 1rem;
+            }
+
+            .btn-primary {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include respond-to(xs) {
+        &-copyright p {
+            font-size: 11px;
+        }
+    }
+}
