@@ -65,7 +65,24 @@
       </div>
     <?php endif; ?>
   </footer>
-    
+
+  <?php 
+  $bgImage = get_field( 'popup_bg_image', 'option' );
+  $bgImage = $bgImage ? 'background-image: url('. $bgImage .'); background-size: 100%; background-repeat:no-repeat; background-size: cover; background-color: #233C29;' : ''; ?>
+  <div id="announcementPopup" class="announcement-popup modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content" style="<?php echo $bgImage; ?>;">
+        <div class="modal-body">
+          <button type="button" class="js-close-modal close" data-dismiss="modal" aria-label="Close">
+            <span class="popup-close-icon"></span>
+          </button>
+          <?php if ( $content = get_field( 'popup_content', 'option' ) ) : ?>
+            <?php echo $content; ?>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
   <?php wp_footer(); ?>
   </body>
 </html>

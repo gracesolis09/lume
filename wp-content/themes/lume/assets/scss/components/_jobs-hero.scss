@@ -1,0 +1,82 @@
+.jobs {
+    &-hero {
+        background-color: $evergreen;
+        color: $sage;
+        text-align: center;
+        padding: 6em 2em;
+        background-repeat: no-repeat;
+        background-size: 34%;
+        background-position: 100% 30%;
+    }
+    &-archive {
+        // padding-top: 6em;
+        // padding-bottom: 6em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        background-color: $balsa;
+
+        & > .container {
+            h3:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            color: $evergreen;
+        }
+
+        h2 {
+            font-size: var(--wp--preset--font-size--large);
+            color: $evergreen;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+
+    @include respond-to(xl) {
+        &-hero {
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            background-size: 38%;
+            background-position: 104% 40%;
+        }
+        &-archive {
+            > .container {
+                max-width: 750px;
+            }
+        }
+    }
+
+    @include respond-to(md-down) {
+        &-hero {
+            background-size: 56%;
+            background-position: 143% 97%;
+        }
+        &-archive {
+            padding-top: 4em;
+            padding-bottom: 4em;
+        }
+    }
+
+    @include respond-to(sm-down) {
+        &-hero {
+            padding: 4em 1em;
+            background-size: 75%;
+            background-position: 120% 0;
+
+            h1 {
+                font-size: 50px;
+            }
+        }
+        &-archive {
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+    }
+}

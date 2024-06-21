@@ -54,4 +54,15 @@
     }
 }
 
+.btn-sage {
+    @extend %btn;
+    color: $evergreen;
+    border-color: $sage;
+    background-color: $sage;
+
+    @include on-event() {
+        background-color: transparent;
+    }
+}
+
 

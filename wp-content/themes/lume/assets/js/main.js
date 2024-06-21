@@ -1,22 +1,37 @@
 jQuery(function ($) {
     $(window).on('load', function () {
+        var announcementPopup = new bootstrap.Modal(document.getElementById("announcementPopup"), {});
         // Check if the cookie exists and if it's expired
         if ($.cookie('visited') == null || $.cookie('visited') == undefined) {
-            myVar = setTimeout(showPage, 6500); // Show loader and animation for first-time visitors
-            $('#loader').find('img').addClass('visible');
+            // myVar = setTimeout(showPage, 6500);
+            myPopup = setTimeout(showPopup, 6500); // Show loader and animation for first-time visitors
+            // $('#loader').find('img').addClass('visible');
             // Set the cookie to expire in 24 hours
             $.cookie('visited', 'true', { expires: 1, path: '/' });
+            announcementPopup.show();
 
         } else {
             // If the cookie exists and hasn't expired, hide the loader immediately
-            $('#loader').find('img').removeClass('visible');
-            $('#loader').hide();
+            // $('#loader').find('img').removeClass('visible');
+            // $('#loader').hide();
+            // announcementPopup.hide();
+            // $('html').css('position', 'inherit', 'overflow', 'inherit');
+            // $('body').css('position', 'inherit', 'overflow', 'inherit');
 
         }
     });
 
-    function showPage() {
-        $('#loader').fadeOut('slow');
+    $('body').on('click','.js-close-modal', function(e) {
+        e.preventDefault();
+        $('#announcementPopup').modal('hide');
+    });
+
+    // function showPage() {
+    //     $('#loader').fadeOut('slow');
+    // }
+
+    function showPopup() {
+        $('#announcementPopup').hide;
     }
 
 
